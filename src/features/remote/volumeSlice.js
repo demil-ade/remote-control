@@ -9,10 +9,14 @@ export const volumeSlice = createSlice({
     initialState,
     reducers: {
         increase: (state) => {
-            state.vol +=1;
+            if(state.vol >= 0 && state.vol < 100){
+                state.vol +=1;
+            }
         },
         decrease: (state) => {
-            state.vol -=1;
+            if(state.vol >= 1 && state.vol <= 100){
+                state.vol -=1;
+            }
         },
         constant: (state) => {
             state.vol = 50;
