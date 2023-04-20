@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { one, two, three, four, five,six, seven, eight, nine} from './channelSlice';
+import Button from './Button';
 
 const Numactions = () => {
     const power = useSelector((state) => state.turn.power);
@@ -69,17 +70,21 @@ const Numactions = () => {
     }
 
     return(
+        <div>
+        
         <div className="numbers">
-            <button className ="abutton" onClick = {First}>1</button>
-            <button className ="abutton" onClick = {Second}>2</button>
-            <button className ="abutton" onClick = {Third}>3</button>
-            <button className ="abutton" onClick = {Fourth}>4</button>
-            <button className ="abutton" onClick = {Fifth}>5</button>
-            <button className ="abutton" onClick = {Sixth}>6</button>
-            <button className ="abutton" onClick = {Seventh}>7</button>
-            <button className ="abutton" onClick = {Eighth}>8</button>
-            <button className ="abutton" onClick = {Ninth}>9</button>
+            <Button onClick = {First} count ='1'/>
+            <Button onClick = {Second} count = '2'/>
+            <Button onClick = {Third} count = '3'/>
+            <Button onClick = {Fourth} count = '4'/>
+            <Button onClick = {Fifth} count = '5'/>
+            <Button onClick = {Sixth} count = '6'/>
+            <Button onClick = {Seventh} count = '7'/>
+            <Button onClick = {Eighth} count = '8'/>
+            <Button onClick = {Ninth} count = '9'/>
+            
 
+        </div>
         </div>
     )
 }
